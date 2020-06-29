@@ -1,6 +1,6 @@
 # labyrinth generator.
 
-This is a simple paradigm of a labyrinth generator.
+This is a simple paradigm of a labyrinth generator. [access it here](https://thanasismpalatsoukas.github.io/Labyrinth-generator/)
 
 ## API points.
 
