@@ -11,8 +11,8 @@ where the user will have to remember where the tiles are and move to the target 
 
 Right now it just generates a puzzle NxN tiles with X obstacles. It checks everytime it adds an obstacle
 if the puzzle is solvable. If it isn't it just selects a different obstacle and adds it. If you want to
-play with it and the values go ahead and get **[broswerify!]**(https://guides.github.com/features/mastering-markdown/)
-and the **[typescript transpiler!]**(https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+play with it and the values go ahead and get [broswerify!](https://guides.github.com/features/mastering-markdown/)
+and the [typescript transpiler!](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 basic commands to get started:
 
