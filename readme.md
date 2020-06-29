@@ -40,3 +40,8 @@ const OPTIONS = {
 }
 ```
 
+## Alright, and why did you make this?
+
+Inspiration was a game called Shattered pixel dungeon where on the 2nd boss you would have to go through
+so puzzle labyrinth games where poison would hit you if you fell on certain tiles. I was wondering how 
+such labyrinth would be constructed so i tried implementing one on my own.
