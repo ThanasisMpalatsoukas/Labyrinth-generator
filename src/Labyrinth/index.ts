@@ -1,4 +1,5 @@
-import {Labyrinth} from './src/Labyrinth';
+import {Labyrinth} from './Labyrinth';
+import { LabyrinthMarkup } from './LabyrinthMarkup';
 
 /**
  * end:        The end point of the game.
@@ -8,22 +9,25 @@ import {Labyrinth} from './src/Labyrinth';
  */
 const OPTIONS = {
     end: {
-        x: 0,
-        y: 1 
+        x: 4,
+        y: 7 
     },
     player: {
-        x: 3,
-        y: 1
+        x: 4,
+        y: 0
     },
-    obstacles: 4,
-    board_size: 4
+    obstacles: 40,
+    board_size: 10
 }
 
 let l = new Labyrinth(OPTIONS.board_size);
 l.setEndTile(OPTIONS.end.x,OPTIONS.end.y);
 l.setPlayerTile(OPTIONS.player.x,OPTIONS.player.y);
 let nNew = l.createObstacles(OPTIONS.obstacles);
-l.findFinishRoad(nNew);
-l.draw();
+let solution = l.findFinishRoad(nNew);
 
+let m = new LabyrinthMarkup(l, document.getElementById("board"), solution);
+m.drawTiles();
+m.populateTiles();
+m.animateSolution();
         

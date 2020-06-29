@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#board {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.solution {
+    background-image: url('src/Labyrinth/images/sport.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.player {
+    background-image: url('src/Labyrinth/images/start.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.danger {
+    background-image: url('src/Labyrinth/images/wall.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.end {
+    background-image: url('src/Labyrinth/images/medal.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -66,6 +66,7 @@ export class Labyrinth {
     
     findFinishRoad(nNew: Node)
     {
+        let nodeArr:Array<Node> = [];
         /**
          * We are traversing the tree here the opposite way
          * to get to the way he came until here.
@@ -79,10 +80,12 @@ export class Labyrinth {
                      * to copy its value to the real labyrinth
                      */
                     let node = this.findTileByPosition(nNew.y, nNew.x);
+                    nodeArr.push(node);
                     node.value = this.SOLUTION_SIGN;
                 }
             }
         }
+        return nodeArr;
     }
 
     draw()

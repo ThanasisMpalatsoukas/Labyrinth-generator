@@ -51,6 +51,7 @@ var Labyrinth = /** @class */ (function () {
         return Math.floor(Math.random() * Math.floor(max));
     };
     Labyrinth.prototype.findFinishRoad = function (nNew) {
+        var nodeArr = [];
         /**
          * We are traversing the tree here the opposite way
          * to get to the way he came until here.
@@ -64,10 +65,12 @@ var Labyrinth = /** @class */ (function () {
                      * to copy its value to the real labyrinth
                      */
                     var node = this.findTileByPosition(nNew.y, nNew.x);
+                    nodeArr.push(node);
                     node.value = this.SOLUTION_SIGN;
                 }
             }
         }
+        return nodeArr;
     };
     Labyrinth.prototype.draw = function () {
         var valuesArr = [];

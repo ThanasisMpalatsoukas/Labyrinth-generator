@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
-var Labyrinth_1 = require("./src/Labyrinth");
+var Labyrinth_1 = require("./Labyrinth");
+var LabyrinthMarkup_1 = require("./LabyrinthMarkup");
 /**
  * end:        The end point of the game.
  * player:     Starting point for the player.
@@ -9,19 +10,22 @@ var Labyrinth_1 = require("./src/Labyrinth");
  */
 var OPTIONS = {
     end: {
-        x: 0,
-        y: 1
+        x: 4,
+        y: 7
     },
     player: {
-        x: 3,
-        y: 1
+        x: 4,
+        y: 0
     },
-    obstacles: 4,
-    board_size: 4
+    obstacles: 40,
+    board_size: 10
 };
 var l = new Labyrinth_1.Labyrinth(OPTIONS.board_size);
 l.setEndTile(OPTIONS.end.x, OPTIONS.end.y);
 l.setPlayerTile(OPTIONS.player.x, OPTIONS.player.y);
 var nNew = l.createObstacles(OPTIONS.obstacles);
-l.findFinishRoad(nNew);
-l.draw();
+var solution = l.findFinishRoad(nNew);
+var m = new LabyrinthMarkup_1.LabyrinthMarkup(l, document.getElementById("board"), solution);
+m.drawTiles();
+m.populateTiles();
+m.animateSolution();
